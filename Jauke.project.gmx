@@ -63,6 +63,14 @@
     <sprite>sprites\item_spa</sprite>
     <sprite>sprites\fire_sprite</sprite>
     <sprite>sprites\vida_spr</sprite>
+    <sprite>sprites\callampa</sprite>
+    <sprite>sprites\chanca</sprite>
+    <sprite>sprites\fondotexto</sprite>
+    <sprite>sprites\huachulen_new</sprite>
+    <sprite>sprites\matorral</sprite>
+    <sprite>sprites\text_box_new</sprite>
+    <sprite>sprites\text_more_new</sprite>
+    <sprite>sprites\pota</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\PastoRoca</background>
@@ -110,8 +118,6 @@
     <object>objects\Interfaz</object>
     <object>objects\Maravilla_obj</object>
     <object>objects\obj_GlobalJoystick</object>
-    <object>objects\huachupen</object>
-    <object>objects\obj_dialogo</object>
     <object>objects\item</object>
     <object>objects\cambio_mapa</object>
     <object>objects\cambio_mapa_2</object>
@@ -119,16 +125,21 @@
     <object>objects\woodfire_obj</object>
     <object>objects\culebra</object>
     <object>objects\ataque_maza</object>
-    <object>objects\object19</object>
+    <object>objects\champi_on</object>
+    <object>objects\chancapiedra</object>
+    <object>objects\machi</object>
+    <object>objects\matorral1</object>
+    <object>objects\obj_dialogo</object>
+    <object>objects\obj_fondo_dialog</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\creacion</room>
     <room>rooms\playita</room>
     <room>rooms\primer_pueblo</room>
     <room>rooms\CasaPrueba</room>
-    <room>rooms\room6</room>
     <room>rooms\room0</room>
     <room>rooms\room3</room>
+    <room>rooms\room6</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

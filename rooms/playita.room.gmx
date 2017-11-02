@@ -53,12 +53,11 @@
   <instances>
     <instance objName="Maravilla_obj" x="832" y="352" name="inst_24E030C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Maravilla_obj" x="1056" y="256" name="inst_40066BB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Interfaz" x="52" y="48" name="inst_C276A30F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Interfaz" x="480" y="224" name="inst_C276A30F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Maravilla_obj" x="1312" y="160" name="inst_236EA7A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Maravilla_obj" x="1536" y="448" name="inst_08ACED93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Maravilla_obj" x="800" y="672" name="inst_A48F7B47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Maravilla_obj" x="704" y="160" name="inst_858EA470" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="huachupen" x="1280" y="384" name="inst_92BF18B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="luciernaga_obj" x="864" y="224" name="inst_7A17EE6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="luciernaga_obj" x="960" y="224" name="inst_116B3075" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="luciernaga_obj" x="1088" y="224" name="inst_5EF9CAF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -72,9 +71,11 @@
     <instance objName="luciernaga_obj" x="1434" y="490" name="inst_DE46142B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="luciernaga_obj" x="1472" y="736" name="inst_BFAB4C3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="luciernaga_obj" x="1280" y="768" name="inst_B903E451" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cambio_mapa" x="2112" y="-32" name="inst_227ECADD" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="640" y="0" name="inst_77B8EBB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="672" y="32" name="inst_AD939CCA" locked="0" code="" scaleX="43" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="2048" y="0" name="inst_BDBD1C20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pared32_obj" x="2080" y="-32" name="inst_9551C73F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="2272" y="0" name="inst_1369F39C" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="2464" y="384" name="inst_075DB4FE" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="448" y="0" name="inst_3D08884B" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
@@ -222,8 +223,11 @@
     <instance objName="culebra" x="1880" y="656" name="inst_5056B92F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="culebra" x="1488" y="342" name="inst_EF5EF65B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="culebra" x="958" y="334" name="inst_99D5F3BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pared32_obj" x="2176" y="694" name="inst_F0596639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cambio_mapa" x="2052" y="-10" name="inst_00D9F7A5" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="machi" x="1006" y="284" name="inst_859B3EB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="874" y="676" name="inst_848C878E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="910" y="632" name="inst_06F52FD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="986" y="634" name="inst_8D082D55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="chancapiedra" x="898" y="258" name="inst_4F737A8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background13" x="1440" y="512" w="32" h="32" xo="32" yo="128" id="10008046" name="inst_B0924B78" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -325,7 +329,7 @@
     <tile bgName="background11" x="1328" y="896" w="32" h="32" xo="160" yo="352" id="10010380" name="inst_4F2368A2" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="2080" y="208" w="32" h="32" xo="160" yo="352" id="10010381" name="inst_A84FF6E5" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="2464" y="464" w="32" h="32" xo="160" yo="352" id="10010382" name="inst_DFF5BB07" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="background11" x="2068" y="642" w="32" h="32" xo="160" yo="352" id="10010383" name="inst_BE004311" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background11" x="2080" y="640" w="32" h="32" xo="160" yo="352" id="10010383" name="inst_BE004311" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="2128" y="352" w="32" h="32" xo="128" yo="384" id="10010384" name="inst_FB4BD328" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="2352" y="640" w="32" h="32" xo="128" yo="384" id="10010385" name="inst_1BE45B3D" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="1280" y="992" w="32" h="32" xo="128" yo="384" id="10010386" name="inst_92D0C441" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -339,7 +343,6 @@
     <tile bgName="background11" x="1984" y="1040" w="32" h="32" xo="64" yo="224" id="10010394" name="inst_5405930A" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="2032" y="1072" w="32" h="32" xo="64" yo="224" id="10010395" name="inst_BF972442" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="1072" y="1040" w="32" h="32" xo="64" yo="224" id="10010396" name="inst_BE28B91F" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Lenga" x="522" y="288" w="194" h="192" xo="4" yo="0" id="10010397" name="inst_68A530E4" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="448" y="32" w="32" h="32" xo="64" yo="128" id="10006276" name="inst_052AED4B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="448" y="64" w="32" h="32" xo="64" yo="128" id="10006277" name="inst_8BA0B759" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background11" x="416" y="96" w="32" h="32" xo="128" yo="96" id="10006278" name="inst_9480C336" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1683,7 +1686,6 @@
     <tile bgName="background13" x="1088" y="800" w="32" h="32" xo="64" yo="0" id="10008322" name="inst_A8A95E0A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background13" x="1120" y="800" w="32" h="32" xo="96" yo="0" id="10008323" name="inst_72053577" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background13" x="1088" y="352" w="32" h="32" xo="96" yo="128" id="10009947" name="inst_936DAC8A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Lenga" x="2146" y="706" w="90" h="44" xo="34" yo="190" id="10010407" name="inst_B1E44F34" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="PastoRoca" x="608" y="32" w="64" h="64" xo="64" yo="384" id="10007558" name="inst_956567C4" depth="600" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="PastoRoca" x="608" y="-32" w="64" h="64" xo="64" yo="320" id="10007559" name="inst_74A2A78C" depth="600" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="PastoRoca" x="672" y="32" w="64" h="64" xo="128" yo="384" id="10007560" name="inst_4441A951" depth="600" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2333,7 +2335,6 @@
     <tile bgName="background22" x="1984" y="640" w="64" h="112" xo="0" yo="0" id="10010362" name="inst_C3449B2A" depth="-4" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background22" x="1840" y="768" w="64" h="112" xo="64" yo="0" id="10010364" name="inst_D6A6A274" depth="-4" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background22" x="2128" y="784" w="64" h="112" xo="128" yo="0" id="10010366" name="inst_F22ECA78" depth="-4" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Lenga" x="2112" y="516" w="220" h="212" xo="0" yo="-22" id="10010408" name="inst_5E5EB303" depth="-4" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

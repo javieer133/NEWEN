@@ -31,7 +31,7 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="pasto1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -50,84 +50,8 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
-  <instances>
-    <instance objName="Interfaz" x="0" y="192" name="inst_97FE6416" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="culebra" x="256" y="480" name="inst_31A14866" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="culebra" x="448" y="288" name="inst_A08B0EF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="culebra" x="672" y="512" name="inst_6DEF3474" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="224" y="384" name="inst_A132E03B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="480" y="416" name="inst_551AA45C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="352" y="512" name="inst_706AF92A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="416" y="192" name="inst_5995BD28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="288" y="128" name="inst_46622976" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="704" y="128" name="inst_23AC9D79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="672" y="192" name="inst_2FC60267" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="608" y="128" name="inst_BAABD4F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="544" y="96" name="inst_F5C366A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Maravilla_obj" x="192" y="256" name="inst_46BBCFFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pared32_obj" x="320" y="416" name="inst_31F1DACA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-  </instances>
-  <tiles>
-    <tile bgName="PastoRoca" x="32" y="128" w="64" h="64" xo="384" yo="192" id="10010442" name="inst_6B0C89DF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="128" w="64" h="64" xo="320" yo="128" id="10010450" name="inst_05BCF1E1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="32" y="192" w="64" h="64" xo="384" yo="192" id="10010457" name="inst_FC873D6F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="32" y="256" w="64" h="64" xo="384" yo="192" id="10010458" name="inst_875025FA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="0" y="192" w="64" h="64" xo="320" yo="192" id="10010466" name="inst_88ADD1B5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="0" y="256" w="64" h="64" xo="320" yo="192" id="10010467" name="inst_D7C8007C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="256" w="64" h="64" xo="320" yo="192" id="10010468" name="inst_884BE592" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="224" w="64" h="64" xo="320" yo="192" id="10010469" name="inst_0DD4EDB1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="192" w="64" h="64" xo="320" yo="192" id="10010470" name="inst_E0E860E5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="64" y="96" w="64" h="64" xo="384" yo="320" id="10010473" name="inst_ACFD05B3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="96" y="64" w="64" h="64" xo="384" yo="320" id="10010474" name="inst_5EAD4A6F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="32" y="64" w="64" h="64" xo="320" yo="256" id="10010475" name="inst_E4369EC4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="0" y="64" w="64" h="64" xo="320" yo="256" id="10010476" name="inst_48451F75" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="32" y="32" w="64" h="64" xo="320" yo="256" id="10010477" name="inst_1184D745" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="0" y="32" w="64" h="64" xo="320" yo="256" id="10010479" name="inst_8AA4F874" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="32" w="64" h="64" xo="320" yo="256" id="10010480" name="inst_0A1A444D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="96" w="64" h="64" xo="320" yo="256" id="10010481" name="inst_40D4A3FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="64" y="0" w="64" h="64" xo="320" yo="256" id="10010483" name="inst_85C6FAEA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="128" y="0" w="64" h="64" xo="384" yo="256" id="10010492" name="inst_A40B4C12" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="32" y="0" w="64" h="64" xo="320" yo="256" id="10010493" name="inst_D170941E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="0" y="0" w="64" h="64" xo="320" yo="256" id="10010494" name="inst_44935FDC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="0" w="64" h="64" xo="320" yo="256" id="10010495" name="inst_247BBA6C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="32" y="320" w="64" h="64" xo="384" yo="192" id="10010496" name="inst_88A6E538" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="32" y="384" w="64" h="64" xo="384" yo="192" id="10010497" name="inst_9CBC0024" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="320" w="64" h="64" xo="320" yo="192" id="10010499" name="inst_B6606B38" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="384" w="64" h="64" xo="320" yo="192" id="10010500" name="inst_627130DE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="-32" y="448" w="64" h="64" xo="320" yo="320" id="10010509" name="inst_D1282D3A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="32" y="448" w="64" h="64" xo="384" yo="320" id="10010510" name="inst_48401B82" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="64" y="576" w="64" h="64" xo="192" yo="0" id="10010530" name="inst_B1997B57" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="128" y="576" w="64" h="64" xo="192" yo="0" id="10010531" name="inst_6B0A5545" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="192" y="576" w="64" h="64" xo="192" yo="0" id="10010532" name="inst_E51AEF33" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="256" y="576" w="64" h="64" xo="192" yo="0" id="10010533" name="inst_E3A3ECC5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="320" y="576" w="64" h="64" xo="192" yo="0" id="10010534" name="inst_97077806" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="384" y="576" w="64" h="64" xo="192" yo="0" id="10010535" name="inst_43DF8FFD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="448" y="576" w="64" h="64" xo="192" yo="0" id="10010536" name="inst_520E469C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="128" y="640" w="64" h="64" xo="192" yo="64" id="10010537" name="inst_824CD1F3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="64" y="640" w="64" h="64" xo="192" yo="64" id="10010538" name="inst_51F3D002" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="192" y="640" w="64" h="64" xo="192" yo="64" id="10010539" name="inst_49287162" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="256" y="640" w="64" h="64" xo="192" yo="64" id="10010540" name="inst_9E0F6842" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="320" y="640" w="64" h="64" xo="192" yo="64" id="10010541" name="inst_6D641345" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="384" y="640" w="64" h="64" xo="192" yo="64" id="10010542" name="inst_338797AB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="448" y="640" w="64" h="64" xo="192" yo="64" id="10010543" name="inst_D932D6E5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="0" y="704" w="64" h="64" xo="256" yo="64" id="10010547" name="inst_55669B01" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="64" y="704" w="64" h="64" xo="256" yo="64" id="10010548" name="inst_7D803192" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="128" y="704" w="64" h="64" xo="256" yo="64" id="10010549" name="inst_90C04EB0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="192" y="704" w="64" h="64" xo="256" yo="64" id="10010550" name="inst_A988F4A1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="256" y="704" w="64" h="64" xo="256" yo="64" id="10010551" name="inst_6B3279F3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="320" y="704" w="64" h="64" xo="256" yo="64" id="10010552" name="inst_126BD58C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="384" y="704" w="64" h="64" xo="256" yo="64" id="10010553" name="inst_78EC360D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="448" y="704" w="64" h="64" xo="256" yo="64" id="10010554" name="inst_2053117A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="0" y="576" w="64" h="64" xo="192" yo="0" id="10010556" name="inst_F77CAF41" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="0" y="640" w="64" h="64" xo="192" yo="64" id="10010560" name="inst_6D564108" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="512" y="576" w="64" h="64" xo="320" yo="0" id="10010562" name="inst_0C19E03A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="512" y="640" w="64" h="64" xo="320" yo="64" id="10010563" name="inst_E71A9C3C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="576" y="640" w="64" h="64" xo="384" yo="64" id="10010564" name="inst_8A570975" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="576" y="704" w="64" h="64" xo="384" yo="128" id="10010565" name="inst_E184B6B5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="PastoRoca" x="512" y="704" w="64" h="64" xo="320" yo="128" id="10010566" name="inst_A5530577" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Lenga" x="256" y="224" w="192" h="192" xo="0" yo="0" id="10010568" name="inst_B199E93F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Lenga" x="256" y="416" w="160" h="64" xo="0" yo="192" id="10010569" name="inst_3F9E2847" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-  </tiles>
+  <instances/>
+  <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>

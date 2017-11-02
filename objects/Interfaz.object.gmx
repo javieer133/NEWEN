@@ -37,16 +37,23 @@ weapon2 = 0
 weapon3 = 0
 weapon4 = 0
 
+global.pota1 = 0//NUEVO
+
+global.planta1 = 0 //NUEVO
+global.planta2 = 0 //NUEVO
+
 
 
 weaponSelected = 0
-hierbaSelected = 0
+utilidadSelected = 0// NUEVO
 
 
 global.maza_ob = 1
-global.lanza_ob = 0
-global.boleadora_ob = 0
-global.arco_ob = 0
+global.lanza_ob = 1
+global.boleadora_ob = 1
+global.arco_ob = 1
+
+global.pota1_ob = 1//NUEVO
 </string>
           </argument>
         </arguments>
@@ -90,6 +97,8 @@ t_weapon2 = keyboard_check(vk_numpad2)
 t_weapon3 = keyboard_check(vk_numpad3)
 t_weapon4 = keyboard_check(vk_numpad4)
 
+t_pota1 = keyboard_check(vk_numpad5)//NUEVO
+
 if(t_weapon1) and global.maza_ob = 1 {
     weapon1 = 1
     weapon2 = 0
@@ -101,20 +110,32 @@ if(t_weapon2) and global.lanza_ob = 1  {
     weapon2 = 1
     weapon3 = 0
     weapon4 = 0
+    
 }
 if(t_weapon3) and global.boleadora_ob = 1 {
     weapon1 = 0
     weapon2 = 0
     weapon3 = 1
     weapon4 = 0
+    
 }
 if(t_weapon4) and global.arco_ob = 1 {
     weapon1 = 0
     weapon2 = 0
     weapon3 = 0
     weapon4 = 1
+    
 }
 
+if(t_pota1) and global.pota1_ob = 1 {//NUEVO
+    weapon1 = 0
+    weapon2 = 0
+    weapon3 = 0
+    weapon4 = 0
+    
+    global.pota1 = 1
+    
+}
 </string>
           </argument>
         </arguments>
@@ -142,10 +163,14 @@ if(t_weapon4) and global.arco_ob = 1 {
 global.enter = virtual_key_add(gui_width/2 - 50, gui_height-100, 100, 100, vk_enter )
 global.accion1 = virtual_key_add(gui_width-250, gui_height-110,100, 100, vk_space)
 global.accion2 = virtual_key_add(gui_width-110, gui_height-245,100, 100, vk_alt)
+
 global.weapon1 = virtual_key_add(gui_width/4-180 , gui_height/4-30,100, 100, vk_numpad1)
 global.weapon2 = virtual_key_add(gui_width/4-30, gui_height/4-30,100, 100, vk_numpad2)
 global.weapon3 = virtual_key_add(gui_width/4+120, gui_height/4-30,100, 100, vk_numpad3)
 global.weapon4 = virtual_key_add(gui_width/4+270, gui_height/4-30,100, 100, vk_numpad4)
+
+global.pota1 = virtual_key_add(gui_width/4-180 , gui_height/4+88,100, 100, vk_numpad5)//NUEVO
+
 global.backmenu =  virtual_key_add(gui_width-150, gui_height/9,100, 100, vk_subtract)
 
 
@@ -163,10 +188,14 @@ if(pause = 1){
     draw_sprite(item_spa,0,gui_width/4-50,gui_height/4 +230)
     draw_sprite(item_spa,0,gui_width/4+100,gui_height/4+230)
     draw_sprite(item_spa,0,gui_width/4+250,gui_height/4+230)
+    
     if global.maza_ob = 1 draw_sprite(maza,0,gui_width/4-200,gui_height/4-50)
     if global.lanza_ob = 1 draw_sprite(lanza,0,gui_width/4-50,gui_height/4-50)
     if global.boleadora_ob = 1 draw_sprite(boleadora,0,gui_width/4+100,gui_height/4-50)
     if global.arco_ob = 1 draw_sprite(arco,0,gui_width/4+250,gui_height/4-50)
+    
+    if global.pota1_ob = 1 draw_sprite(pota,0,gui_width/4-200,gui_height/4+90)//NUEVO
+        
     draw_sprite(btnMenu,0,gui_width-150, gui_height/9)
     
     if(weapon1 = 1){
@@ -180,6 +209,10 @@ if(pause = 1){
     }   
      else if(weapon4 = 1){
         draw_sprite(arco,0,gui_width/2,gui_height-115)
+    }
+    
+    else if(global.pota1 = 1){ // NUEVO
+         draw_sprite(pota,0,gui_width/2,gui_height-115)
     }
     
 }   
