@@ -227,6 +227,7 @@
     <instance objName="matorral1" x="910" y="632" name="inst_06F52FD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="matorral1" x="986" y="634" name="inst_8D082D55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="chancapiedra" x="898" y="258" name="inst_4F737A8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="MapucheNPC" x="1260" y="324" name="inst_8723F76E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background13" x="1440" y="512" w="32" h="32" xo="32" yo="128" id="10008046" name="inst_B0924B78" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

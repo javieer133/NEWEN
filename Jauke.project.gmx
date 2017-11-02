@@ -71,6 +71,7 @@
     <sprite>sprites\text_box_new</sprite>
     <sprite>sprites\text_more_new</sprite>
     <sprite>sprites\pota</sprite>
+    <sprite>sprites\mapuches1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\PastoRoca</background>
@@ -131,6 +132,7 @@
     <object>objects\matorral1</object>
     <object>objects\obj_dialogo</object>
     <object>objects\obj_fondo_dialog</object>
+    <object>objects\MapucheNPC</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\creacion</room>
