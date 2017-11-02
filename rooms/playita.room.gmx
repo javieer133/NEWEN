@@ -223,6 +223,7 @@
     <instance objName="culebra" x="1488" y="342" name="inst_EF5EF65B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="culebra" x="958" y="334" name="inst_99D5F3BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="2176" y="694" name="inst_F0596639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cambio_mapa" x="2052" y="-10" name="inst_00D9F7A5" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background13" x="1440" y="512" w="32" h="32" xo="32" yo="128" id="10008046" name="inst_B0924B78" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

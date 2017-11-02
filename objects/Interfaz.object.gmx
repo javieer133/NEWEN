@@ -185,9 +185,9 @@ if(pause = 1){
 }   
 
 if(pause = 0){
-    /*draw_sprite(btnMenu,0, gui_width/2 - 50,gui_height-100)
+    draw_sprite(btnMenu,0, gui_width/2 - 50,gui_height-100)
     draw_sprite(btnAccion1,0, gui_width - 250,gui_height-110)
-    draw_sprite(btnAccion2,0, gui_width - 110,gui_height-245)*/
+    draw_sprite(btnAccion2,0, gui_width - 110,gui_height-245)
     //vida 
     draw_sprite(vida_spr,global.vida - 1, 20, 20) 
 }

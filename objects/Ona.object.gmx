@@ -307,8 +307,6 @@ if atacando = 1 and puede_atacar = 1 {
           <argument>
             <kind>1</kind>
             <string>//Interacciones
-
-
 if global.vida = 0 room_restart();
 
 
