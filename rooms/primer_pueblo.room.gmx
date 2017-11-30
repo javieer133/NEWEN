@@ -3,8 +3,8 @@
   <caption></caption>
   <width>2000</width>
   <height>1000</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>1</vsnap>
+  <hsnap>1</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -63,7 +63,7 @@ if (global.room_anterior = CasaPrueba) {
     <instance objName="pared32_obj" x="448" y="192" name="inst_86D52558" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="416" y="224" name="inst_DF4479C5" locked="0" code="" scaleX="1.29999995231628" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="544" y="224" name="inst_C446708B" locked="0" code="" scaleX="-1.29999995231628" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="cambio_casa_1" x="448" y="224" name="inst_1C734E32" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cambio_casa_1" x="448" y="226" name="inst_1C734E32" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="512" y="544" name="inst_767CF758" locked="0" code="" scaleX="1.29999995231628" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="598" y="544" name="inst_B38A3E90" locked="0" code="" scaleX="1.29999995231628" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="544" y="512" name="inst_0BD04400" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
@@ -136,7 +136,9 @@ if (global.room_anterior = CasaPrueba) {
     <instance objName="pared32_obj" x="1760" y="544" name="inst_3FFFAD24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="1792" y="512" name="inst_5CE35191" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="1824" y="480" name="inst_D3905717" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="luz_obj" x="1408" y="384" name="inst_470D2D6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cambio_casa_2" x="548" y="558" name="inst_7E3B5E20" locked="0" code="" scaleX="1.8125" scaleY="0.90625" colour="4294967295" rotation="0"/>
+    <instance objName="Ona" x="427" y="409" name="inst_43597B84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="item" x="729" y="599" name="inst_85207154" locked="0" code="sprite_index = madera&#xA;precio = 1&#xA;setradea = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background11" x="160" y="192" w="32" h="32" xo="128" yo="96" id="10008612" name="inst_7B56488D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

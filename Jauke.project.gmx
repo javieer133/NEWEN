@@ -33,7 +33,7 @@
       <sprite>sprites\zorroWR</sprite>
       <sprite>sprites\zorroWU</sprite>
     </sprites>
-    <sprite>sprites\Maravilla</sprite>
+    <sprite>sprites\Maravilla_plant</sprite>
     <sprite>sprites\spr_Joystick</sprite>
     <sprite>sprites\spr_JoystickKnob</sprite>
     <sprites name="Mapuche">
@@ -43,35 +43,60 @@
       <sprite>sprites\mapWU</sprite>
       <sprite>sprites\mapAMD</sprite>
       <sprite>sprites\mapAMR</sprite>
+      <sprite>sprites\mapWDO</sprite>
+      <sprite>sprites\mapWUO</sprite>
+      <sprite>sprites\mapWLO</sprite>
+      <sprite>sprites\mapWRO</sprite>
       <sprite>sprites\mapAML</sprite>
+      <sprites name="Items">
+        <sprite>sprites\maravilla</sprite>
+        <sprite>sprites\pinon</sprite>
+        <sprite>sprites\rocas</sprite>
+        <sprite>sprites\madera</sprite>
+        <sprite>sprites\tremun</sprite>
+        <sprite>sprites\chancapie</sprite>
+        <sprite>sprites\maza</sprite>
+        <sprite>sprites\boleadora</sprite>
+        <sprite>sprites\arco</sprite>
+        <sprite>sprites\lanza</sprite>
+        <sprites name="ingame">
+          <sprite>sprites\maravilla_m</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprite>sprites\menuSprite</sprite>
+    <sprite>sprites\tradeSprite</sprite>
     <sprite>sprites\text_box</sprite>
     <sprite>sprites\text_more</sprite>
     <sprite>sprites\huachulen</sprite>
-    <sprite>sprites\arco</sprite>
-    <sprite>sprites\boleadora</sprite>
-    <sprite>sprites\lanza</sprite>
     <sprite>sprites\btnAccion1</sprite>
     <sprite>sprites\btnAccion2</sprite>
     <sprite>sprites\cambio</sprite>
     <sprite>sprites\cambio2</sprite>
     <sprite>sprites\cambio3</sprite>
     <sprite>sprites\btnMenu</sprite>
+    <sprite>sprites\acept_trade</sprite>
     <sprite>sprites\sprite47</sprite>
-    <sprite>sprites\maza</sprite>
     <sprite>sprites\item_spa</sprite>
     <sprite>sprites\fire_sprite</sprite>
     <sprite>sprites\vida_spr</sprite>
     <sprite>sprites\callampa</sprite>
     <sprite>sprites\chanca</sprite>
     <sprite>sprites\fondotexto</sprite>
+    <sprite>sprites\spr_boton_int</sprite>
     <sprite>sprites\huachulen_new</sprite>
     <sprite>sprites\matorral</sprite>
     <sprite>sprites\text_box_new</sprite>
     <sprite>sprites\text_more_new</sprite>
-    <sprite>sprites\pota</sprite>
     <sprite>sprites\mapuches1</sprite>
+    <sprite>sprites\spr_mas</sprite>
+    <sprite>sprites\spr_menos</sprite>
+    <sprite>sprites\NEWEN</sprite>
+    <sprites name="Españoles">
+      <sprites name="basico">
+        <sprite>sprites\EBW_D</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\PastoRoca</background>
@@ -97,6 +122,7 @@
     <background>background\background21</background>
     <background>background\background22</background>
     <background>background\background23</background>
+    <background>background\background24</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -105,9 +131,13 @@
     <script>scripts\Parado.gml</script>
     <script>scripts\Andando.gml</script>
     <script>scripts\Muriendo.gml</script>
+    <script>scripts\joystick.gml</script>
+    <script>scripts\borde_texto.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\mapuche</font>
+    <font>fonts\mapuche_texto</font>
+    <font>fonts\pixel</font>
   </fonts>
   <objects name="objects">
     <object>objects\Ona</object>
@@ -123,6 +153,7 @@
     <object>objects\cambio_mapa</object>
     <object>objects\cambio_mapa_2</object>
     <object>objects\cambio_casa_1</object>
+    <object>objects\cambio_casa_2</object>
     <object>objects\woodfire_obj</object>
     <object>objects\culebra</object>
     <object>objects\ataque_maza</object>
@@ -130,18 +161,22 @@
     <object>objects\chancapiedra</object>
     <object>objects\machi</object>
     <object>objects\matorral1</object>
-    <object>objects\obj_dialogo</object>
     <object>objects\obj_fondo_dialog</object>
-    <object>objects\MapucheNPC</object>
+    <object>objects\obj_dialogo</object>
+    <object>objects\obj_boton_machi</object>
+    <object>objects\TraderNPC</object>
+    <object>objects\NEWEN_obj</object>
+    <object>objects\Espanol_B</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\creacion</room>
     <room>rooms\playita</room>
+    <room>rooms\exploracion</room>
     <room>rooms\primer_pueblo</room>
     <room>rooms\CasaPrueba</room>
+    <room>rooms\primera_tienda</room>
     <room>rooms\room0</room>
     <room>rooms\room3</room>
-    <room>rooms\room6</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

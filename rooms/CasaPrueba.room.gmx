@@ -85,6 +85,8 @@
     <instance objName="pared32_obj" x="627" y="218" name="inst_A8F29246" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pared32_obj" x="301" y="512" name="inst_7F4C206E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="machi" x="577" y="353" name="inst_682AC976" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Ona" x="506" y="472" name="inst_17061066" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="item" x="409" y="417" name="inst_2333DBA5" locked="0" code="sprite_index = maza&#xA;precio = 10&#xA;arma = 1&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background13" x="240" y="192" w="32" h="32" xo="64" yo="192" id="10009664" name="inst_8478E11B" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

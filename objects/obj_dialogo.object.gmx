@@ -27,7 +27,9 @@
             <kind>1</kind>
             <string>///variables de texto
 numero= 0 ;
-texto[0] = "Hola joven mapuche, bless!";
+texto[0] = "Yo puedo sanar tus heridas";
+texto[1] = "Quieres intercambiar cosas";
+
 
 
 </string>
@@ -76,8 +78,8 @@ texto[0] = "Hola joven mapuche, bless!";
             <kind>1</kind>
             <string>draw_set_color(c_black);
 draw_set_halign(fa_left);
-draw_set_font(mapuche);
-draw_text_ext_transformed(x - 80, y - 80, texto[0], 10, 200, 0.5, 0.5, 0);
+draw_set_font(mapuche_texto);
+draw_text_ext_transformed(x - 80, y - 80, texto[0], 20, 300, 0.5, 0.5, 0);
 
 
 </string>

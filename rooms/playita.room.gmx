@@ -3,8 +3,8 @@
   <caption></caption>
   <width>2500</width>
   <height>1500</height>
-  <vsnap>2</vsnap>
-  <hsnap>2</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -227,7 +227,28 @@
     <instance objName="matorral1" x="910" y="632" name="inst_06F52FD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="matorral1" x="986" y="634" name="inst_8D082D55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="chancapiedra" x="898" y="258" name="inst_4F737A8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="MapucheNPC" x="1260" y="324" name="inst_8723F76E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="TraderNPC" x="1260" y="324" name="inst_8723F76E" locked="0" code="dialogo.texto[0] = &quot;Quieres intercambiar cosas?&quot;;&#xA;image_index = 3" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pared32_obj" x="512" y="480" name="inst_558573B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pared32_obj" x="1074" y="1040" name="inst_5D9C4D1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cambio_mapa_2" x="2496" y="416" name="inst_4A733725" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
+    <instance objName="machi" x="992" y="256" name="inst_84D1E956" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2464" y="448" name="inst_39C9F237" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2464" y="480" name="inst_EA979CA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2432" y="512" name="inst_0EA0A349" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2432" y="544" name="inst_5ADD2D4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2432" y="576" name="inst_4B582690" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2432" y="608" name="inst_338E8B0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2432" y="640" name="inst_D064CEA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2464" y="672" name="inst_BD257611" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="1696" y="256" name="inst_96482A0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="1312" y="1088" name="inst_D0297AF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="1728" y="1184" name="inst_E1B166BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2208" y="512" name="inst_9996EFA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="800" y="896" name="inst_3B096F43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="1152" y="288" name="inst_A11B9D70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="2080" y="288" name="inst_503E1C43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="matorral1" x="1856" y="864" name="inst_2252C081" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="TraderNPC" x="800" y="512" name="inst_C9497E3F" locked="0" code="dialogo.texto[0] = &quot;Hhola profe&quot;;&#xA;image_index = 2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background13" x="1440" y="512" w="32" h="32" xo="32" yo="128" id="10008046" name="inst_B0924B78" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

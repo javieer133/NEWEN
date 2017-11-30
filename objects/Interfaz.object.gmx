@@ -26,34 +26,24 @@
           <argument>
             <kind>1</kind>
             <string>global.posicionpj = 0
+globalvar i;
 gui_width = 1280        
 gui_height = 720
-pause = 0
+global.pause = 0
+global.trade_pota = 0
 accion1 = 0
 accion2 = 0
-
-weapon1 = 0
-weapon2 = 0
-weapon3 = 0
-weapon4 = 0
-
-global.pota1 = 0//NUEVO
-
-global.planta1 = 0 //NUEVO
-global.planta2 = 0 //NUEVO
+global.acumulado = 0
+global.cantidad_comprado = 1
 
 
+global.pota1_menos = 0
+global.pota2_menos = 0
+global.pota3_menos = 0
+global.pota4_menos = 0
 
-weaponSelected = 0
-utilidadSelected = 0// NUEVO
+ 
 
-
-global.maza_ob = 1
-global.lanza_ob = 1
-global.boleadora_ob = 1
-global.arco_ob = 1
-
-global.pota1_ob = 1//NUEVO
 </string>
           </argument>
         </arguments>
@@ -80,17 +70,125 @@ global.pota1_ob = 1//NUEVO
 t_escape = keyboard_check(vk_escape);
 if t_escape game_end()
 t_menu = keyboard_check(vk_enter);
-if t_menu pause=1
+if t_menu global.pause=1
 t_menu = keyboard_check(vk_subtract);
-if t_menu pause=0
+if t_menu global.pause=0
+t_backtrapo = keyboard_check(vk_backspace)
 
-if (pause = 1){ 
+if (global.pause = 1){ 
     instance_deactivate_all(Interfaz)
     instance_activate_object(luz_obj)     
 }
-if (pause =0){ 
-    instance_activate_all()
+if (global.trade_pota = 1){
+    instance_deactivate_all(Interfaz)
+    instance_activate_object(luz_obj) 
+    if t_pota1_mas and global.POTAS[1,2]&gt;0 and global.acumulado &lt; global.precio_comprar{
+        global.acumulado += global.POTAS[1,1]
+        global.pota1_menos ++
+        global.POTAS[1,2]--
+    }
+    if t_pota1_men and global.pota1_menos&gt;0{
+        global.acumulado -= global.POTAS[1,1]
+        global.pota1_menos --
+        global.POTAS[1,2]++
+    }
+    if t_pota2_mas and global.POTAS[2,2]&gt;0 and global.acumulado &lt; global.precio_comprar{
+        global.acumulado += global.POTAS[2,1]
+        global.pota2_menos ++
+        global.POTAS[2,2]--
+    }
+    if t_pota2_men and global.pota2_menos&gt;0{
+        global.acumulado -= global.POTAS[2,1]
+        global.pota2_menos --
+        global.POTAS[2,2]++
+    }
+    if t_pota3_mas and global.POTAS[3,2]&gt;0 and global.acumulado &lt; global.precio_comprar{
+        global.acumulado += global.POTAS[3,1]
+        global.pota3_menos ++
+        global.POTAS[3,2]--
+    }
+    if t_pota3_men and global.pota3_menos&gt;0{
+        global.acumulado -= global.POTAS[3,1]
+        global.pota3_menos --
+        global.POTAS[3,2]++
+    }
+    if t_pota4_mas and global.POTAS[4,2]&gt;0 and global.acumulado &lt; global.precio_comprar{
+        global.acumulado += global.POTAS[4,1]
+        global.pota4_menos ++
+        global.POTAS[4,2]--
+    }
+    if t_pota4_men and global.pota4_menos&gt;0{
+        global.acumulado -= global.POTAS[4,1]
+        global.pota4_menos --
+        global.POTAS[4,2]++
+    }
+    if t_item_mas {
+        global.precio_comprar += global.precio_item
+        global.cantidad_comprado ++
+    }
+    if t_item_men and global.precio_comprar &gt; global.precio_item and global.acumulado&lt;global.precio_comprar{
+        global.cantidad_comprado --
+        global.precio_comprar -= global.precio_item
+    }
+    if t_trade_acept and global.acumulado &gt;= global.precio_comprar {
+        for (i = 1; i&lt;=4;i++){
+            if global.POTAS[i,0] = global.item_a_comprar {
+                global.POTAS[i,2] += global.cantidad_comprado
+                break
+            }
+            else if global.POTAS[i,0] = 0 {
+                global.POTAS[i,0] = global.item_a_comprar
+                global.POTAS[i,1] = global.precio_item
+                global.POTAS[i,2] = global.cantidad_comprado
+                break
+            }
+        }
+        global.comprando = 0  
+        global.pota1_menos = 0
+        global.pota2_menos = 0 
+        global.pota3_menos = 0
+        global.pota4_menos = 0
+        global.acumulado = 0
+        global.cantidad_comprado = 1
+        global.trade_pota = 0
+    }
+    if t_backtrapo{
+        global.POTAS[1,2] += global.pota1_menos
+        global.POTAS[2,2] += global.pota2_menos
+        global.POTAS[3,2] += global.pota3_menos
+        global.POTAS[4,2] += global.pota4_menos
+        global.trade_pota = 0
+        global.comprando = 0  
+        global.pota1_menos = 0
+        global.pota2_menos = 0 
+        global.pota3_menos = 0
+        global.pota4_menos = 0 
+        global.acumulado = 0
+        global.cantidad_comprado = 1
+        }
 }
+if (global.pause =0 and global.trade_pota = 0){ 
+    instance_activate_all()
+    if global.POTAS[1,2] = 0 global.POTAS[1,0] = 0
+    if global.POTAS[2,2] = 0 global.POTAS[2,0] = 0
+    if global.POTAS[3,2] = 0 global.POTAS[3,0] = 0
+    if global.POTAS[4,2] = 0 global.POTAS[4,0] = 0
+}
+t_trade_acept = keyboard_check_pressed(vk_alt)
+t_pota1_mas = keyboard_check_pressed(ord("W"))
+t_pota1_men = keyboard_check_pressed(ord("Q"))
+
+t_pota2_mas = keyboard_check_pressed(ord("S"))
+t_pota2_men = keyboard_check_pressed(ord("A"))
+
+t_pota3_mas = keyboard_check_pressed(ord("R"))
+t_pota3_men = keyboard_check_pressed(ord("E"))
+
+t_pota4_mas = keyboard_check_pressed(ord("F"))
+t_pota4_men = keyboard_check_pressed(ord("D"))
+
+t_item_mas = keyboard_check_pressed(ord("Y"))
+t_item_men = keyboard_check_pressed(ord("T"))
 
 t_weapon1 = keyboard_check(vk_numpad1)
 t_weapon2 = keyboard_check(vk_numpad2)
@@ -98,50 +196,94 @@ t_weapon3 = keyboard_check(vk_numpad3)
 t_weapon4 = keyboard_check(vk_numpad4)
 
 t_pota1 = keyboard_check(vk_numpad5)//NUEVO
+t_pota2 = keyboard_check(vk_numpad6)
+t_pota3 = keyboard_check(vk_numpad7)//NUEVO
+t_pota4 = keyboard_check(vk_numpad8)
+if(t_weapon1) and global.ARMAS[1,0] != 0 {
+    global.weapon1 = 1
+    global.weapon2 = 0
+    global.weapon3 = 0
+    global.weapon4 = 0
+}
+if(t_weapon2) and global.ARMAS[2,0] != 0  {
+    global.weapon1 = 0
+    global.weapon2 = 1
+    global.weapon3 = 0
+    global.weapon4 = 0
+    
+}
+if(t_weapon3) and global.ARMAS[3,0] != 0 {
+    global.weapon1 = 0
+    global.weapon2 = 0
+    global.weapon3 = 1
+    global.weapon4 = 0
+    
+}
+if(t_weapon4) and global.ARMAS[4,0] != 0 {
+    global.weapon1 = 0
+    global.weapon2 = 0
+    global.weapon3 = 0
+    global.weapon4 = 1
+    
+}
 
-if(t_weapon1) and global.maza_ob = 1 {
-    weapon1 = 1
-    weapon2 = 0
-    weapon3 = 0
-    weapon4 = 0
-}
-if(t_weapon2) and global.lanza_ob = 1  {
-    weapon1 = 0
-    weapon2 = 1
-    weapon3 = 0
-    weapon4 = 0
-    
-}
-if(t_weapon3) and global.boleadora_ob = 1 {
-    weapon1 = 0
-    weapon2 = 0
-    weapon3 = 1
-    weapon4 = 0
-    
-}
-if(t_weapon4) and global.arco_ob = 1 {
-    weapon1 = 0
-    weapon2 = 0
-    weapon3 = 0
-    weapon4 = 1
-    
-}
-
-if(t_pota1) and global.pota1_ob = 1 {//NUEVO
-    weapon1 = 0
-    weapon2 = 0
-    weapon3 = 0
-    weapon4 = 0
-    
+if(t_pota1) and global.POTAS[1,2] &gt;0 {//NUEVO
     global.pota1 = 1
-    
+    global.pota2 = 0 
+    global.pota3 = 0
+    global.pota4 = 0  
 }
+if(t_pota2) and global.POTAS[2,2] &gt; 0 {//NUEVO
+   global.pota1 = 0
+    global.pota2 = 1  
+    global.pota3 = 0
+    global.pota4 = 0 
+}
+if(t_pota3) and global.POTAS[3,2] &gt; 0 {//NUEVO
+    global.pota1 = 0
+    global.pota2 = 0
+    global.pota3 = 1
+    global.pota4 = 0    
+}
+if(t_pota4) and global.POTAS[4,2] &gt; 0 {//NUEVO
+   global.pota1 = 0
+    global.pota2 = 0  
+    global.pota3 = 0
+    global.pota4 = 1  
+}
+
+
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>526</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_font</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>12</kind>
+            <font>mapuche</font>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -161,20 +303,87 @@ if(t_pota1) and global.pota1_ob = 1 {//NUEVO
             <string>display_set_gui_size(gui_width,gui_height)
 
 global.enter = virtual_key_add(gui_width/2 - 50, gui_height-100, 100, 100, vk_enter )
-global.accion1 = virtual_key_add(gui_width-250, gui_height-110,100, 100, vk_space)
-global.accion2 = virtual_key_add(gui_width-110, gui_height-245,100, 100, vk_alt)
+global.accion_1 = virtual_key_add(gui_width-250, gui_height-110,100, 100, vk_space)
+global.accion_2 = virtual_key_add(gui_width-110, gui_height-245,100, 100, ord("Z"))
+global.accept_trade = virtual_key_add(gui_width-300,gui_height-100,100,100,vk_alt)
+global.cancel_trade = virtual_key_add(gui_width-300,gui_height/2-300,100,100,vk_backspace)
 
-global.weapon1 = virtual_key_add(gui_width/4-180 , gui_height/4-30,100, 100, vk_numpad1)
-global.weapon2 = virtual_key_add(gui_width/4-30, gui_height/4-30,100, 100, vk_numpad2)
-global.weapon3 = virtual_key_add(gui_width/4+120, gui_height/4-30,100, 100, vk_numpad3)
-global.weapon4 = virtual_key_add(gui_width/4+270, gui_height/4-30,100, 100, vk_numpad4)
+global.weapon_1 = virtual_key_add(gui_width/4-180 , gui_height/4-30,100, 100, vk_numpad1)
+global.weapon_2 = virtual_key_add(gui_width/4-30, gui_height/4-30,100, 100, vk_numpad2)
+global.weapon_3 = virtual_key_add(gui_width/4+120, gui_height/4-30,100, 100, vk_numpad3)
+global.weapon_4 = virtual_key_add(gui_width/4+270, gui_height/4-30,100, 100, vk_numpad4)
 
-global.pota1 = virtual_key_add(gui_width/4-180 , gui_height/4+88,100, 100, vk_numpad5)//NUEVO
+global.pota_1 = virtual_key_add(gui_width/4-200 , gui_height/4+88,100, 100, vk_numpad5)//NUEVO
+global.pota_2 = virtual_key_add(gui_width/4-50 , gui_height/4+88,100, 100, vk_numpad6)//NUEVO
+global.pota_1 = virtual_key_add(gui_width/4+100 , gui_height/4+88,100, 100, vk_numpad7)//NUEVO
+global.pota_2 = virtual_key_add(gui_width/4+250 , gui_height/4+88,100, 100, vk_numpad8)//NUEVO
+
+global.pota_1_mas = virtual_key_add(gui_width/2 +200 , gui_height/4 -57,54, 54, ord("W"))
+global.pota_1_menos = virtual_key_add(gui_width/2 +50 , gui_height/4 -57,54, 154, ord("Q"))
+
+global.pota_2_mas = virtual_key_add(gui_width/2 +200 , gui_height/4 +63,54, 54, ord("S"))
+global.pota_2_menos = virtual_key_add(gui_width/2 +50 , gui_height/4 +63,54, 154, ord("A"))
+
+global.pota_3_mas = virtual_key_add(gui_width/2 +200 , gui_height/4 +183,54, 54, ord("R"))
+global.pota_3_menos = virtual_key_add(gui_width/2 +50 , gui_height/4 +183,54, 154, ord("E"))
+
+global.pota_4_mas = virtual_key_add(gui_width/2 +200 , gui_height/4 +303,54, 54, ord("F"))
+global.pota_4_menos = virtual_key_add(gui_width/2 +50 , gui_height/4 +303,54, 154, ord("D"))
+
+global.item_p_mas = virtual_key_add(gui_width/2 -160 , gui_height/4 +80,54, 54, ord("Y"))
+global.item_p_menos = virtual_key_add(gui_width/2 -285 , gui_height/4 +80,54, 154, ord("T")) 
 
 global.backmenu =  virtual_key_add(gui_width-150, gui_height/9,100, 100, vk_subtract)
 
+if(global.trade_pota = 1){
 
-if(pause = 1){
+   draw_sprite(tradeSprite,0, gui_width/2,gui_height/2) 
+   draw_sprite(btnMenu,0,gui_width-300,gui_height/2-300)
+   draw_sprite(item_spa,0,gui_width/2 - 250,gui_height/4 -40)
+   draw_sprite(global.item_a_comprar,0,gui_width/2 - 250,gui_height/4 -40)
+   
+   if global.cantidad_comprado &gt; 1 {
+       draw_sprite(spr_menos,0,gui_width/2 -285 , gui_height/4 +80) 
+   }
+   draw_sprite(spr_mas,0,gui_width/2 - 160,gui_height/4 +80)
+   borde_texto(global.cantidad_comprado,gui_width/2-215,gui_height/4+80,c_black,100,1,c_white)
+   draw_sprite(item_spa,0,gui_width/2 - 70,gui_height/4 -80)
+   draw_sprite(item_spa,0,gui_width/2 - 70,gui_height/4 +40)
+   draw_sprite(item_spa,0,gui_width/2 - 70,gui_height/4 +160)
+   draw_sprite(item_spa,0,gui_width/2 - 70,gui_height/4 +280)
+   
+   if global.acumulado &lt; global.precio_comprar{
+        if global.POTAS[1,2]&gt;0 draw_sprite(spr_mas,0,gui_width/2 +200 , gui_height/4 -57)
+        if global.POTAS[2,2]&gt;0 draw_sprite(spr_mas,0,gui_width/2 +200 , gui_height/4 +63) 
+        if global.POTAS[3,2]&gt;0 draw_sprite(spr_mas,0,gui_width/2 +200 , gui_height/4 +183) 
+        if global.POTAS[4,2]&gt;0 draw_sprite(spr_mas,0,gui_width/2 +200 , gui_height/4 +303) 
+   }
+   if global.POTAS[1,0]!=0 {
+        borde_texto(global.pota1_menos,gui_width/2+130,gui_height/4-57,c_black,100,1,c_white)
+        draw_sprite(global.POTAS[1,0],0,gui_width/2 - 70,gui_height/4 -80)
+   }
+   if global.POTAS[2,0]!=0{
+        borde_texto(global.pota2_menos,gui_width/2+130,gui_height/4+63,c_black,100,1,c_white)
+        draw_sprite(global.POTAS[2,0],0,gui_width/2 - 70,gui_height/4 +40) 
+   }
+   if global.POTAS[3,0]!=0 {
+        borde_texto(global.pota3_menos,gui_width/2+130,gui_height/4+183,c_black,100,1,c_white)
+        draw_sprite(global.POTAS[3,0],0,gui_width/2 - 70,gui_height/4 +160)
+   }
+   if global.POTAS[4,0]!=0{
+        borde_texto(global.pota4_menos,gui_width/2+130,gui_height/4+303,c_black,100,1,c_white)
+        draw_sprite(global.POTAS[4,0],0,gui_width/2 - 70,gui_height/4 +280) 
+   }
+   if global.pota1_menos &gt; 0 draw_sprite(spr_menos,0,gui_width/2 +50 , gui_height/4 -57)
+   if global.pota2_menos &gt; 0 draw_sprite(spr_menos,0,gui_width/2 +50 , gui_height/4 +63)
+   if global.pota3_menos &gt; 0 draw_sprite(spr_menos,0,gui_width/2 +50 , gui_height/4 +183)
+   if global.pota4_menos &gt; 0 draw_sprite(spr_menos,0,gui_width/2 +50 , gui_height/4 +303)
+   
+   if global.acumulado &gt;= global.precio_comprar {
+        draw_sprite(acept_trade,0,gui_width-300,gui_height-100)
+   }
+}
+if(global.pause = 1){
     draw_sprite(menuSprite,0, gui_width/2,gui_height/2)
     draw_sprite(item_spa,0,gui_width/4-200,gui_height/4-50)
     draw_sprite(item_spa,0,gui_width/4-50,gui_height/4 -50)
@@ -189,40 +398,100 @@ if(pause = 1){
     draw_sprite(item_spa,0,gui_width/4+100,gui_height/4+230)
     draw_sprite(item_spa,0,gui_width/4+250,gui_height/4+230)
     
-    if global.maza_ob = 1 draw_sprite(maza,0,gui_width/4-200,gui_height/4-50)
-    if global.lanza_ob = 1 draw_sprite(lanza,0,gui_width/4-50,gui_height/4-50)
-    if global.boleadora_ob = 1 draw_sprite(boleadora,0,gui_width/4+100,gui_height/4-50)
-    if global.arco_ob = 1 draw_sprite(arco,0,gui_width/4+250,gui_height/4-50)
+    draw_sprite(pinon,0, gui_width-375, gui_height-180) 
+    borde_texto(global.pinones,gui_width-300,gui_height-160,c_black,100,1,c_white) 
     
-    if global.pota1_ob = 1 draw_sprite(pota,0,gui_width/4-200,gui_height/4+90)//NUEVO
-        
+    
+    if global.ARMAS[1,0] != 0 draw_sprite(global.ARMAS[1,0],0,gui_width/4-200,gui_height/4-50)
+    if global.ARMAS[2,0] != 0 draw_sprite(global.ARMAS[2,0],0,gui_width/4-50,gui_height/4-50)
+    if global.ARMAS[3,0] != 0 draw_sprite(global.ARMAS[3,0],0,gui_width/4+100,gui_height/4-50)
+    if global.ARMAS[4,0] != 0 draw_sprite(global.ARMAS[4,0],0,gui_width/4+250,gui_height/4-50)
+    
+    if global.POTAS[1,2] &gt; 0 {
+        draw_sprite(global.POTAS[1,0],0,gui_width/4-200,gui_height/4+90)//NUEVO
+        borde_texto(global.POTAS[1,2],gui_width/4-130,gui_height/4+140,c_black,100,1,c_white)
+    }
+    if global.POTAS[2,2] &gt; 0 {
+        draw_sprite(global.POTAS[2,0],0,gui_width/4 - 50,gui_height/4+90)//NUEVO
+        borde_texto(global.POTAS[2,2],gui_width/4+20,gui_height/4+140,c_black,100,1,c_white)
+    } 
+    if global.POTAS[3,2] &gt; 0 {
+        draw_sprite(global.POTAS[3,0],0,gui_width/4+100,gui_height/4+90)//NUEVO
+        borde_texto(global.POTAS[3,2],gui_width/4+170,gui_height/4+140,c_black,100,1,c_white)
+    }
+    if global.POTAS[4,2] &gt; 0 {
+        draw_sprite(global.POTAS[4,0],0,gui_width/4 +250,gui_height/4+90)//NUEVO
+        borde_texto(global.POTAS[4,2],gui_width/4+320,gui_height/4+140,c_black,100,1,c_white)
+    }        
     draw_sprite(btnMenu,0,gui_width-150, gui_height/9)
     
-    if(weapon1 = 1){
-         draw_sprite(maza,0,gui_width/2,gui_height-115)
+    if(global.weapon1 = 1){
+         draw_sprite(maza,0,gui_width/2+300,gui_height-315)
+
     }
-    else if(weapon2 = 1){
-        draw_sprite(lanza,0,gui_width/2,gui_height-115)
+    else if(global.weapon2 = 1){
+        draw_sprite(lanza,0,gui_width/2+300,gui_height-315)
     }   
-     else if(weapon3= 1){
-        draw_sprite(boleadora,0,gui_width/2,gui_height-115)
+     else if(global.weapon3= 1){
+        draw_sprite(boleadora,0,gui_width/2+300,gui_height-315)
     }   
-     else if(weapon4 = 1){
-        draw_sprite(arco,0,gui_width/2,gui_height-115)
+     else if(global.weapon4 = 1){
+        draw_sprite(arco,0,gui_width/2+300,gui_height-315)
     }
     
-    else if(global.pota1 = 1){ // NUEVO
-         draw_sprite(pota,0,gui_width/2,gui_height-115)
+    if(global.pota1 = 1){ // NUEVO
+         draw_sprite(global.POTAS[1,0],0,gui_width/2 + 400,gui_height-315)
+
     }
+    if(global.pota2 = 1){ // NUEVO
+         draw_sprite(global.POTAS[2,0],0,gui_width/2 + 400,gui_height-315)
+
+    }
+    if(global.pota3 = 1){ // NUEVO
+         draw_sprite(global.POTAS[3,0],0,gui_width/2 + 400,gui_height-315)
+
+    }
+    if(global.pota4 = 1){ // NUEVO
+         draw_sprite(global.POTAS[4,0],0,gui_width/2 + 400,gui_height-315)
+
+    }
+    
     
 }   
 
-if(pause = 0){
+if(global.pause = 0 and global.trade_pota=0){
     draw_sprite(btnMenu,0, gui_width/2 - 50,gui_height-100)
     draw_sprite(btnAccion1,0, gui_width - 250,gui_height-110)
     draw_sprite(btnAccion2,0, gui_width - 110,gui_height-245)
     //vida 
     draw_sprite(vida_spr,global.vida - 1, 20, 20) 
+    draw_sprite(pinon,0, 400, 5) 
+    borde_texto(global.pinones,475,25,c_black,100,1,c_white) 
+    if(global.weapon1 = 1){
+         draw_sprite(maza,0,gui_width-250, gui_height-110)
+    }
+    else if(global.weapon2 = 1){
+        draw_sprite(lanza,0,gui_width/2+300,gui_height-315)
+    }   
+     else if(global.weapon3= 1){
+        draw_sprite(boleadora,0,gui_width/2+300,gui_height-315)
+    }   
+     else if(global.weapon4 = 1){
+        draw_sprite(arco,0,gui_width/2+300,gui_height-315)
+    }
+    
+    if(global.pota1 = 1){ // NUEVO
+         draw_sprite(global.POTAS[1,0],0,gui_width-110, gui_height-245)
+    }
+    if(global.pota2 = 1){ // NUEVO
+         draw_sprite(global.POTAS[2,0],0,gui_width-110, gui_height-245)
+    }
+    if(global.pota3 = 1){ // NUEVO
+         draw_sprite(global.POTAS[3,0],0,gui_width-110, gui_height-245)
+    }
+    if(global.pota4 = 1){ // NUEVO
+         draw_sprite(global.POTAS[4,0],0,gui_width-110, gui_height-245)
+    }
 }
 </string>
           </argument>

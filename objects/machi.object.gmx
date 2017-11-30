@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>pared32_obj</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,6 +27,33 @@
             <kind>1</kind>
             <string> instance_create(x,y,obj_dialogo);
  instance_create(x-200,y-105,obj_fondo_dialog);
+ instance_create(x+4,y-54,obj_boton_machi);
+ global.sanando = 0
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.vida = 3
+global.sanando = 0
 </string>
           </argument>
         </arguments>
@@ -50,15 +77,19 @@
           <argument>
             <kind>1</kind>
             <string>
-if distance_to_object(Ona)&lt;90{
+if distance_to_object(Ona)&lt;90 and global.sanando = 0{
     instance_activate_object(obj_dialogo);
     instance_activate_object(obj_fondo_dialog);
+    instance_activate_object(obj_boton_machi)
 }
-else
+if distance_to_object(Ona)&gt;=90 or global.sanando = 1
 {
     instance_deactivate_object(obj_dialogo);
     instance_deactivate_object(obj_fondo_dialog);
+    instance_deactivate_object(obj_boton_machi)
 }
+
+
 </string>
           </argument>
         </arguments>
